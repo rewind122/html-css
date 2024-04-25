@@ -1,1 +1,35 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>피규어와 이미지</title>
+  </head>
+  <body>
+    <!-- 제목의 역할을 담당하는 이미지(시멘틱 마크업; 요소의 의미를 생각하며 코드를 작성하기) -->
+    <!-- alt 정보를 입력 시 해당 내용이 이미지를 대체함(heading 태그에 작성하면 heading으로 인식?) -->
+    <h1><img src="./images/webcafe-logo.png" alt="웹카페" /></h1>
+
+    <img src="./images/brochure.png" alt="" />
+    <br />
+    <!-- lazy=지연된 로딩을 사용하겠다 (퍼포먼스가 좋아짐!) -->
+    <img src="./images/coffee.png" alt="" loading="lazy" />
+
+    <!-- figure=캡션을 가지는 그룹(이미지 등과 같이 많이 쓰임!) -->
+    <figure>
+      <img src="./images/likelion-black.png" alt="" />
+      <figcaption>멋쟁이 사자처럼</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/rwd.jpg" alt="" />
+      <figcaption>
+        <p>
+          <strong>Responsive Web<br />Design Strategies</strong>
+          <span>반응형 웹디자인 전략</span>
+        </p>
+        <a href="/">강의정보</a>
+      </figcaption>
+    </figure>
+  </body>
+</html>
