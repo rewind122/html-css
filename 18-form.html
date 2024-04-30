@@ -1,1 +1,71 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 관련 요소</title>
+  </head>
+  <body>
+    <!-- 검색어 입력 서식 예시 -->
+    <!-- action: 입력받은 데이터를 보낼 서버의 주소를 적어주는 속성 -->
+    <!-- method: 방법? POST와 GET -->
+    <form action="https://formspree.io/seulbinim@gmail.com" method="POST" class="search-form" id="serch-form">
+      <!-- fieldset: html4에선 생략 가능, div와 같이 묶어주는 역할인데 같은 범주/용도를 가진 서식을 묶어줌 -->
+      <fieldset>
+        <!-- legend: 필드셋으로 묶어준 그룹의 성격 -->
+        <legend>검색</legend>
+        <div class="searchform-wrapper">
+          <!-- label: 입력 서식에 대한 정보 -->
+          <!-- 인풋의 id를 label의 for 속성에 꼭 넣어줘야 함 -->
+          <!-- label 태그 안에 인풋 태그를 쓰는 암묵적인 레이블링 방식을 쓰기도 하나 접근성 측면에서는 아이디 연결이 좋음 -->
+            <label for="search" class="a11yHidden form-input-label">검색어</label>
+            <input type="search" id="search" required placeholder="검색어를 입력하세요." name="search" class="form-input" />
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <!-- 버튼 태그의 타입 속성: 기본적으로 submit -->
+    <!-- 전송하는 역할이 아니라면 버튼 타입을 따로 지정해주는 것이 좋음 -->
+    <!-- html5부터 form 영역 밖에 태그를 써도 form 태그의 아이디를 버튼의 form 속성에 넣어서 사용 가능 -->
+    <button type="submit" class="searchform-button" form="search-form">검색</button>
+
+    <br />
+    <!-- 체크 박스 예시 -->
+    <div class="form-checkbox-wrapper">
+      <!-- id로 잘 연결만 되어있다면? input과 label의 순서는 상관 없음  -->
+      <!-- label과 연결되어있으면 label에 있는 텍스트까지 클리커블 영역이 됨 -->
+      <input class="form-checkbox" type="checkbox" id="secretWritings" name="secretWritings" />
+      <label for="secretWritings" class="form-checkbox-label">
+        비밀글로 등록하기
+      </label>
+    </div>
+
+    <br />
+    <!-- 라디오 버튼 예시 -->
+    <p id="euid-course">이듬 교육을 다시 수강할 의향이 있으신가요?</p>
+    <div aria-labelledby="euid-course" role="group">
+      <!-- input에 같은 name을 가지고 있는 경우 하나만 선택이 됨 -->
+      <div class="form-radio-wrapper">
+        <input type="radio" id="euid-course-yes" value="Y" name="euidCourse" class="form-radio" />
+        <label for="euid-course-yes" class="form-radio-label">예</label>
+      </div>
+      <div class="form-radio-wrapper">
+        <input type="radio" id="euid-course-no" value="N" name="euidCourse" class="form-radio" />
+        <label for="euid-course-no" class="form-radio-label">아니오</label>
+      </div>
+    </div>
+    <br />
+    <!-- 셀렉트 박스 예시 -->
+    <select aria-label="언어 선택" name="selectLanguage" class="select-language__select">
+      <option value="korean">한국어</option>
+      <option value="english">영어</option>
+    </select>
+    <br />
+    <!-- 텍스트 에어리어 예시 -->
+    <div class="form-textarea-wrapper">
+      <label for="message" class="form-textarea-label">Message</label>
+      <textarea id="message" name="message" cols="20" rows="10" placeholder="Put your extra message" class="form-textarea"></textarea>
+    </div>
+
+  </body>
+</html>
