@@ -1,1 +1,26 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스크립팅 요소</title>
+    <link rel="stylesheet" href="./style/card.css" />
+    <!-- defer와 async 비교 https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html -->
+    <!-- 최신 자바스크립트는 defer 쓰지 않고 타입을 모듈로 처리하면 defer와 같음 -->
+    <!-- 스크립트를 바디가 끝나기 전에 연결해두면 defer나 타입모듈 없이도 동작 -->
+    <script src="./js/card.js" type="module"></script>
+    <noscript>
+      <p>Javascript를 지원하지 않은 환경에서는 서비스를 이용할 수 없습니다.</p>
+    </noscript>
+  </head>
+  <body>
+    <button type="button" class="flip-button">카드 뒤집기</button>
+
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-face card-face-black"></div>
+        <div class="card-face card-face-white"></div>
+      </div>
+    </div>
+  </body>
+</html>
