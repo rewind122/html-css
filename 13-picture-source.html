@@ -1,1 +1,35 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>picture, source 요소</title>
+  </head>
+  <body>
+    <picture>
+      <!-- <source srcset="./images/netflix.png 1x, ./images/netflix@2x.png 2x" /> -->
+      <!-- <img src="./images/netflix@2x.png" alt="넷플릭스" /> -->
+      <!-- img 태그는 필수, source 태그는 생략가능 -->
+      <!-- 픽셀의 밀도에 따라 로드되는 이미지가 달라짐 -->
+      <!-- srcset 속성은 img 태그 안에 넣는 것도 가능 -->
+      <!-- <img src="./images/netflix@2x.png" srcset="./images/netflix.png 1x, ./images/netflix@2x.png 2x" alt="넷플릭스" /> -->
+      
+      <source srcset="./images/netflix@1x.webp 1x, ./images/netflix@2x.webp 2x" />
+      <img src="./images/netflix.png" alt="넷플릭스" />
+    </picture>
+
+    <hr />
+
+    <picture>
+      <source srcset="./images/image-1x.png 1x, ./images/image-2x.png 2x, ./images/image-3x.png 3x, ./images/image-4x.png 4x"/>
+      <img src="./images/image-src.png" alt="src" />
+      <!-- srcset를 제대로 인식하지 못할 시 대안으로 img 태그의 이미지가 나온다 -->
+      <!-- x 디스크립터: 배율 기준(픽셀의 밀도), w 디스크립터: 뷰포트 사이즈(width) 기준 -->
+    </picture>
+    <picture>
+      <source srcset="./images/small-550.jpg 550w, ./images/medium-1024.jpg 1024w, ./images/large-1600.jpg 1600w" sizes="(max-width: 800px) 50vw, 600px" />
+      <!-- sizes: 화면에 보이는 이미지 크기 -->
+      <img src="./images/image-src.png" alt="src" />
+    </picture>
+  </body>
+</html>
