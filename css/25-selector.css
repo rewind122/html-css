@@ -1,1 +1,26 @@
 /* CSS 선택자(Selector) */
+
+/* 유니버셜 셀렉터, 전체 선택자 */
+* {
+  color: red;
+}
+
+/* 요소 선택자 */
+p {
+  color: blue;
+}
+
+/* . # -> 식별자 */
+.note {
+  color: green;
+}
+
+/* 명시도에 의한 선택자 가중치?? */
+#euid {
+  color: violet;
+}
+
+/* [] 속성 선택자 */
+a[href] {
+  color: yellowgreen;
+}
